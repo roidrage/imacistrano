@@ -7,6 +7,7 @@
 //
 
 #import "Stage.h"
+#import "Task.h"
 
 @implementation Stage
 
@@ -14,20 +15,13 @@
 @synthesize projectId;
 @synthesize stageId;
 
-+(NSArray*)findAllForProjectWithId:(NSString*)projectId {
-  NSString *projectStagesPath = [NSString stringWithFormat:@"%@%@/%@/%@%@",
-                                 [self getRemoteSite],
-                                 [Project getRemoteCollectionName],
-                                 projectId,
-                                 [self getRemoteCollectionName],
-                                 [self getRemoteProtocolExtension]];
-  Response *response = [Connection get:projectStagesPath withUser:[[self class] getUser]
-                           andPassword:[[self class] getPassword]];
-  
-  return [self allFromXMLData:[response body]];
-}
-
 + (NSString *)getRemoteCollectionName {
   return @"projects";
+}
+
+- (NSArray *)findAllTasks {
+  NSLog(@"%@ %@", projectId, stageId);
+//  return [Task findRemote:[NSString stringWithFormat:@"%@/%@/%@/%@", projectId, @"stages", stageId, @"tasks", nil]];
+  return [NSArray new];
 }
 @end

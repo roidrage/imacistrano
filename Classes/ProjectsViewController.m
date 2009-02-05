@@ -49,80 +49,13 @@
   [aStageViewController release];  
 }
 
-
-/*
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Uncomment the following line to add the Edit button to the navigation bar.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-*/
-
-
-/*
-// Override to support editing the list
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
-    }   
-    if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-
-/*
-// Override to support conditional editing of the list
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-
-/*
-// Override to support rearranging the list
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-
-/*
-// Override to support conditional rearranging of the list
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-*/
-/*
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-}
-*/
-/*
-- (void)viewWillDisappear:(BOOL)animated {
-}
-*/
-/*
-- (void)viewDidDisappear:(BOOL)animated {
-}
-*/
-
 - (void)viewDidLoad {
   [ObjectiveResourceConfig setSite:@"http://webistrano.local/"];
   [ObjectiveResourceConfig setUser:@"admin"];
   [ObjectiveResourceConfig setPassword:@"admin"];
   projects = [Project findAllRemote];
-  
+  self.title = @"Projects";
+
   [projects retain];
   [super viewDidLoad];
 }

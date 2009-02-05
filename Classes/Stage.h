@@ -23,5 +23,5 @@
 @property (retain, nonatomic)NSString *name;
 @property (retain, nonatomic)NSString *projectId;
 
-+(NSArray *)findAllForProjectWithId:(NSString*)projectId;
+-(NSArray *)findAllTasks;
 @end
