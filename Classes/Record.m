@@ -6,11 +6,11 @@
 //  Copyright 2009 agelion. All rights reserved.
 //
 
-#import "Task.h"
+#import "Record.h"
 
 
-@implementation Task
-@synthesize taskId, name, description;
+@implementation Record
+@synthesize recordId, name, description;
 
 + (NSString *)getRemoteCollectionName {
   return @"projects";

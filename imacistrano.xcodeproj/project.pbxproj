@@ -49,7 +49,7 @@
 		FEF41FEA0F3B3AB8009E6577 /* StagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF41FE90F3B3AB8009E6577 /* StagesViewController.m */; };
 		FEF420730F3B42D5009E6577 /* StagesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEF420720F3B42D5009E6577 /* StagesViewController.xib */; };
 		FEF420CA0F3B537D009E6577 /* StageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF420C90F3B537D009E6577 /* StageViewController.m */; };
-		FEF420E60F3B5572009E6577 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF420E50F3B5572009E6577 /* Task.m */; };
+		FEF420E60F3B5572009E6577 /* Record.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF420E50F3B5572009E6577 /* Record.m */; };
 		FEF420F70F3B5ACD009E6577 /* StageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEF420F60F3B5ACD009E6577 /* StageViewController.xib */; };
 /* End PBXBuildFile section */
 
@@ -143,8 +143,8 @@
 		FEF420720F3B42D5009E6577 /* StagesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StagesViewController.xib; sourceTree = "<group>"; };
 		FEF420C80F3B537D009E6577 /* StageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StageViewController.h; sourceTree = "<group>"; };
 		FEF420C90F3B537D009E6577 /* StageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StageViewController.m; sourceTree = "<group>"; };
-		FEF420E40F3B5572009E6577 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
-		FEF420E50F3B5572009E6577 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		FEF420E40F3B5572009E6577 /* Record.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Record.h; sourceTree = "<group>"; };
+		FEF420E50F3B5572009E6577 /* Record.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Record.m; sourceTree = "<group>"; };
 		FEF420F60F3B5ACD009E6577 /* StageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StageViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,8 +181,8 @@
 				FEF41FE90F3B3AB8009E6577 /* StagesViewController.m */,
 				FEF420C80F3B537D009E6577 /* StageViewController.h */,
 				FEF420C90F3B537D009E6577 /* StageViewController.m */,
-				FEF420E40F3B5572009E6577 /* Task.h */,
-				FEF420E50F3B5572009E6577 /* Task.m */,
+				FEF420E40F3B5572009E6577 /* Record.h */,
+				FEF420E50F3B5572009E6577 /* Record.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -473,7 +473,7 @@
 				FEF41F400F3B33BD009E6577 /* Stage.m in Sources */,
 				FEF41FEA0F3B3AB8009E6577 /* StagesViewController.m in Sources */,
 				FEF420CA0F3B537D009E6577 /* StageViewController.m in Sources */,
-				FEF420E60F3B5572009E6577 /* Task.m in Sources */,
+				FEF420E60F3B5572009E6577 /* Record.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

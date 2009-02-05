@@ -9,13 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "ObjectiveResource.h"
 
-@interface Task : NSObject {
-  NSString *taskId;
+@interface Record : NSObject {
+  NSString *recordId;
   NSString *name;
   NSString *description;
 }
 
-@property (retain, nonatomic) NSString *taskId;
+@property (retain, nonatomic) NSString *recordId;
 @property (retain, nonatomic) NSString *name;
 @property (retain, nonatomic) NSString *description;
 @end

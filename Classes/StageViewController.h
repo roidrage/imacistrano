@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "Stage.h"
 
-@interface StageViewController : UIViewController {
+@interface StageViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate> {
   Stage *stage;
   NSArray *tasks;
+  IBOutlet UIPickerView *pickerView;
 }
 
 @property (retain, nonatomic) Stage *stage;

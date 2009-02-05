@@ -7,7 +7,7 @@
 //
 
 #import "Stage.h"
-#import "Task.h"
+#import "Record.h"
 
 @implementation Stage
 
@@ -20,8 +20,6 @@
 }
 
 - (NSArray *)findAllTasks {
-  NSLog(@"%@ %@", projectId, stageId);
-//  return [Task findRemote:[NSString stringWithFormat:@"%@/%@/%@/%@", projectId, @"stages", stageId, @"tasks", nil]];
-  return [NSArray new];
+  return [Record findRemote:[NSString stringWithFormat:@"%@/%@/%@/%@", projectId, @"stages", stageId, @"tasks", nil]];
 }
 @end
