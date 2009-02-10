@@ -58,14 +58,13 @@
   self.title = @"Projects";
   [super viewDidLoad];
 }
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
   return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 - (void)didReceiveMemoryWarning {
-  [super didReceiveMemoryWarning]; // Releases the view if it doesn't have a superview
-    // Release anything that's not essential, such as cached data
+  [super didReceiveMemoryWarning];
 }
 
 - (void)dealloc {
@@ -85,6 +84,14 @@
     [alert show];
     [alert release];
     return NO;
+  }
+  
+  if (username == nil || [username length] == 0) {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Configuration Error" message:@"You don't have a username configured. Please use the Settings to specify one." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
+    [alert release];
+    return NO;
+    
   }
   
   return YES;
