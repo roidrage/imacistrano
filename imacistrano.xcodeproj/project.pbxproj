@@ -15,6 +15,7 @@
 		2899E5600DE3E45000AC0155 /* ProjectsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E55F0DE3E45000AC0155 /* ProjectsViewController.xib */; };
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		28C286E10D94DF7D0034E888 /* ProjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* ProjectsViewController.m */; };
+		FEE2D3300F41D87200389080 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FEE2D32F0F41D87200389080 /* Settings.bundle */; };
 		FEE7502A0E8FC7E1006BB5D4 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE750290E8FC7E1006BB5D4 /* Project.m */; };
 		FEE7502F0E8FC972006BB5D4 /* Host.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE7502E0E8FC972006BB5D4 /* Host.m */; };
 		FEF41E850F3B23D1009E6577 /* NSString+InflectionSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF41E400F3B23D1009E6577 /* NSString+InflectionSupport.m */; };
@@ -67,6 +68,7 @@
 		28C286E00D94DF7D0034E888 /* ProjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectsViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEE2D32F0F41D87200389080 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		FEE750280E8FC7E1006BB5D4 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Project.h; path = ../Project.h; sourceTree = "<group>"; };
 		FEE750290E8FC7E1006BB5D4 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Project.m; path = ../Project.m; sourceTree = "<group>"; };
 		FEE7502D0E8FC972006BB5D4 /* Host.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Host.h; path = ../Host.h; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				8D1107310486CEB800E47090 /* Info.plist */,
 				FEF420720F3B42D5009E6577 /* StagesViewController.xib */,
 				FEF420F60F3B5ACD009E6577 /* StageViewController.xib */,
+				FEE2D32F0F41D87200389080 /* Settings.bundle */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				2899E5600DE3E45000AC0155 /* ProjectsViewController.xib in Resources */,
 				FEF420730F3B42D5009E6577 /* StagesViewController.xib in Resources */,
 				FEF420F70F3B5ACD009E6577 /* StageViewController.xib in Resources */,
+				FEE2D3300F41D87200389080 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
