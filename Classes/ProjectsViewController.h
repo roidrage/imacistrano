@@ -11,6 +11,15 @@
 @interface ProjectsViewController : UITableViewController {
   NSArray *projects;
   IBOutlet UITableView *tableView;
+  NSString *hostUrl;
+  NSString *username;
+  NSString *password;
 }
 
+-(void)loadPrefs;
+-(BOOL)checkPrefs;
+
+@property (retain, nonatomic) NSString *hostUrl;
+@property (retain, nonatomic) NSString *username;
+@property (retain, nonatomic) NSString *password;
 @end
