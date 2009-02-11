@@ -19,10 +19,10 @@
   NSString *log;
 }
 
-@property (retain, nonatomic) NSString *task;
-@property (retain, nonatomic) NSString *description;
-@property (retain, nonatomic) NSString *deploymentId;
-@property (retain, nonatomic) NSString *status;
-@property (retain, nonatomic) NSString *log;
+@property (copy, nonatomic) NSString *task;
+@property (copy, nonatomic) NSString *description;
+@property (copy, nonatomic) NSString *deploymentId;
+@property (copy, nonatomic) NSString *status;
+@property (copy, nonatomic) NSString *log;
 
 @end
