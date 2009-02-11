@@ -9,12 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "Stage.h"
 
-@interface StageViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate> {
+@interface StageViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate> {
   Stage *stage;
   NSArray *tasks;
   IBOutlet UIPickerView *pickerView;
+  IBOutlet UITextField *descriptionField;
 }
 
 @property (retain, nonatomic) Stage *stage;
 @property (retain, nonatomic) NSArray *tasks;
+
+- (IBAction)runDeployment:(id)sender;
+
 @end
