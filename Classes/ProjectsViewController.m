@@ -45,8 +45,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   NSArray *stages = [[projects objectAtIndex:indexPath.row] findAllStages];
   StagesViewController * aStageViewController = [[StagesViewController alloc] initWithNibName:@"StagesViewController" bundle:nil];
-  aStageViewController.project = [projects objectAtIndex:indexPath.row];
-  aStageViewController.stages = stages;
+  [aStageViewController setProject: [projects objectAtIndex:indexPath.row]];
+  [aStageViewController setStages: stages];
   [self.navigationController pushViewController:aStageViewController animated:YES];
   [aStageViewController release];  
 }

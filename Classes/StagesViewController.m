@@ -7,7 +7,7 @@
 //
 
 #import "StagesViewController.h"
-#import "StageViewController.h"
+#import "CreateDeploymentController.h"
 
 @implementation StagesViewController
 @synthesize project, stages;
@@ -33,21 +33,21 @@
 
 - (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"Cell";
+  static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
-    }
+  UITableViewCell *cell = [aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
+  if (cell == nil) {
+    cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
+  }
     
-	  Stage *stage = [stages objectAtIndex:indexPath.row];
-    cell.text = stage.name;
+	Stage *stage = [stages objectAtIndex:indexPath.row];
+  cell.text = stage.name;
 
-    return cell;
+  return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  StageViewController *aStageViewController = [[StageViewController alloc] initWithNibName:@"StageViewController" bundle:nil];
+  CreateDeploymentController *aStageViewController = [[CreateDeploymentController alloc] initWithNibName:@"CreateDeploymentController" bundle:nil];
   [aStageViewController setStage:[stages objectAtIndex:indexPath.row]];
   [aStageViewController setTasks:[[stages objectAtIndex:indexPath.row] findAllTasks]];
   [self.navigationController pushViewController:aStageViewController animated:YES];

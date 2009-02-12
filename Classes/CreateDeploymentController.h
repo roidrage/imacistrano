@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Stage.h"
 
-@interface StageViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate> {
+@interface CreateDeploymentController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate> {
   Stage *stage;
   NSArray *tasks;
   IBOutlet UIPickerView *pickerView;

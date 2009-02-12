@@ -6,10 +6,10 @@
 //  Copyright 2009 agelion. All rights reserved.
 //
 
-#import "StageViewController.h"
+#import "CreateDeploymentController.h"
 #import "Deployment.h"
 
-@implementation StageViewController
+@implementation CreateDeploymentController
 @synthesize stage, tasks;
 
 - (void)viewDidLoad {

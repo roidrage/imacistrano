@@ -50,9 +50,9 @@
 		FEF41F400F3B33BD009E6577 /* Stage.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF41F3F0F3B33BD009E6577 /* Stage.m */; };
 		FEF41FEA0F3B3AB8009E6577 /* StagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF41FE90F3B3AB8009E6577 /* StagesViewController.m */; };
 		FEF420730F3B42D5009E6577 /* StagesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEF420720F3B42D5009E6577 /* StagesViewController.xib */; };
-		FEF420CA0F3B537D009E6577 /* StageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF420C90F3B537D009E6577 /* StageViewController.m */; };
+		FEF420CA0F3B537D009E6577 /* CreateDeploymentController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF420C90F3B537D009E6577 /* CreateDeploymentController.m */; };
 		FEF420E60F3B5572009E6577 /* Record.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF420E50F3B5572009E6577 /* Record.m */; };
-		FEF420F70F3B5ACD009E6577 /* StageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEF420F60F3B5ACD009E6577 /* StageViewController.xib */; };
+		FEF420F70F3B5ACD009E6577 /* CreateDeploymentController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEF420F60F3B5ACD009E6577 /* CreateDeploymentController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -146,11 +146,11 @@
 		FEF41FE80F3B3AB8009E6577 /* StagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StagesViewController.h; sourceTree = "<group>"; };
 		FEF41FE90F3B3AB8009E6577 /* StagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StagesViewController.m; sourceTree = "<group>"; };
 		FEF420720F3B42D5009E6577 /* StagesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StagesViewController.xib; sourceTree = "<group>"; };
-		FEF420C80F3B537D009E6577 /* StageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StageViewController.h; sourceTree = "<group>"; };
-		FEF420C90F3B537D009E6577 /* StageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StageViewController.m; sourceTree = "<group>"; };
+		FEF420C80F3B537D009E6577 /* CreateDeploymentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateDeploymentController.h; sourceTree = "<group>"; };
+		FEF420C90F3B537D009E6577 /* CreateDeploymentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateDeploymentController.m; sourceTree = "<group>"; };
 		FEF420E40F3B5572009E6577 /* Record.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Record.h; sourceTree = "<group>"; };
 		FEF420E50F3B5572009E6577 /* Record.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Record.m; sourceTree = "<group>"; };
-		FEF420F60F3B5ACD009E6577 /* StageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StageViewController.xib; sourceTree = "<group>"; };
+		FEF420F60F3B5ACD009E6577 /* CreateDeploymentController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateDeploymentController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,7 +216,7 @@
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				FEF420720F3B42D5009E6577 /* StagesViewController.xib */,
-				FEF420F60F3B5ACD009E6577 /* StageViewController.xib */,
+				FEF420F60F3B5ACD009E6577 /* CreateDeploymentController.xib */,
 				FEE2D32F0F41D87200389080 /* Settings.bundle */,
 			);
 			name = Resources;
@@ -239,8 +239,8 @@
 				28C286E00D94DF7D0034E888 /* ProjectsViewController.m */,
 				FEF41FE80F3B3AB8009E6577 /* StagesViewController.h */,
 				FEF41FE90F3B3AB8009E6577 /* StagesViewController.m */,
-				FEF420C80F3B537D009E6577 /* StageViewController.h */,
-				FEF420C90F3B537D009E6577 /* StageViewController.m */,
+				FEF420C80F3B537D009E6577 /* CreateDeploymentController.h */,
+				FEF420C90F3B537D009E6577 /* CreateDeploymentController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -450,7 +450,7 @@
 				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
 				2899E5600DE3E45000AC0155 /* ProjectsViewController.xib in Resources */,
 				FEF420730F3B42D5009E6577 /* StagesViewController.xib in Resources */,
-				FEF420F70F3B5ACD009E6577 /* StageViewController.xib in Resources */,
+				FEF420F70F3B5ACD009E6577 /* CreateDeploymentController.xib in Resources */,
 				FEE2D3300F41D87200389080 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,7 +497,7 @@
 				FEF41EA00F3B23D1009E6577 /* ObjectiveResourceConfig.m in Sources */,
 				FEF41F400F3B33BD009E6577 /* Stage.m in Sources */,
 				FEF41FEA0F3B3AB8009E6577 /* StagesViewController.m in Sources */,
-				FEF420CA0F3B537D009E6577 /* StageViewController.m in Sources */,
+				FEF420CA0F3B537D009E6577 /* CreateDeploymentController.m in Sources */,
 				FEF420E60F3B5572009E6577 /* Record.m in Sources */,
 				FE3F5F8A0F42E5AF0044A4DF /* Deployment.m in Sources */,
 			);
