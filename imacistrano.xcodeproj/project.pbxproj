@@ -170,26 +170,12 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				FEF41F3E0F3B33BD009E6577 /* Stage.h */,
-				FEF41F3F0F3B33BD009E6577 /* Stage.m */,
+				FEA74BFF0F4436F4000231AB /* Models */,
+				FEA74BFD0F4436EF000231AB /* Controllers */,
 				FEF41E740F3B23D1009E6577 /* ObjectiveResource */,
 				FEF41E3B0F3B23D1009E6577 /* lib */,
-				FEE7502D0E8FC972006BB5D4 /* Host.h */,
-				FEE7502E0E8FC972006BB5D4 /* Host.m */,
-				FEE750280E8FC7E1006BB5D4 /* Project.h */,
-				FEE750290E8FC7E1006BB5D4 /* Project.m */,
-				28C286DF0D94DF7D0034E888 /* ProjectsViewController.h */,
-				28C286E00D94DF7D0034E888 /* ProjectsViewController.m */,
 				1D3623240D0F684500981E51 /* imacistranoAppDelegate.h */,
 				1D3623250D0F684500981E51 /* imacistranoAppDelegate.m */,
-				FEF41FE80F3B3AB8009E6577 /* StagesViewController.h */,
-				FEF41FE90F3B3AB8009E6577 /* StagesViewController.m */,
-				FEF420C80F3B537D009E6577 /* StageViewController.h */,
-				FEF420C90F3B537D009E6577 /* StageViewController.m */,
-				FEF420E40F3B5572009E6577 /* Record.h */,
-				FEF420E50F3B5572009E6577 /* Record.m */,
-				FE3F5F880F42E5AF0044A4DF /* Deployment.h */,
-				FE3F5F890F42E5AF0044A4DF /* Deployment.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -244,6 +230,36 @@
 				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FEA74BFD0F4436EF000231AB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				28C286DF0D94DF7D0034E888 /* ProjectsViewController.h */,
+				28C286E00D94DF7D0034E888 /* ProjectsViewController.m */,
+				FEF41FE80F3B3AB8009E6577 /* StagesViewController.h */,
+				FEF41FE90F3B3AB8009E6577 /* StagesViewController.m */,
+				FEF420C80F3B537D009E6577 /* StageViewController.h */,
+				FEF420C90F3B537D009E6577 /* StageViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		FEA74BFF0F4436F4000231AB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FEF41F3E0F3B33BD009E6577 /* Stage.h */,
+				FEF41F3F0F3B33BD009E6577 /* Stage.m */,
+				FEE7502D0E8FC972006BB5D4 /* Host.h */,
+				FEE7502E0E8FC972006BB5D4 /* Host.m */,
+				FEE750280E8FC7E1006BB5D4 /* Project.h */,
+				FEE750290E8FC7E1006BB5D4 /* Project.m */,
+				FEF420E40F3B5572009E6577 /* Record.h */,
+				FEF420E50F3B5572009E6577 /* Record.m */,
+				FE3F5F880F42E5AF0044A4DF /* Deployment.h */,
+				FE3F5F890F42E5AF0044A4DF /* Deployment.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		FEF41E3B0F3B23D1009E6577 /* lib */ = {

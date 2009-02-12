@@ -12,6 +12,11 @@
 #import "Stage.h"
 #import "StagesViewController.h"
 
+@interface ProjectsViewController (PrivateInterface)
+-(void)loadPrefs;
+-(BOOL)checkPrefs;
+@end
+
 @implementation ProjectsViewController
 @synthesize password, username, hostUrl;
 

@@ -18,8 +18,7 @@
 }
 
 - (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning]; // Releases the view if it doesn't have a superview
-    // Release anything that's not essential, such as cached data
+  [super didReceiveMemoryWarning];
 }
 
 #pragma mark Table view methods
@@ -49,8 +48,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   StageViewController *aStageViewController = [[StageViewController alloc] initWithNibName:@"StageViewController" bundle:nil];
-  aStageViewController.stage = [stages objectAtIndex:indexPath.row];
-  aStageViewController.tasks = [[stages objectAtIndex:indexPath.row] findAllTasks];
+  [aStageViewController setStage:[stages objectAtIndex:indexPath.row]];
+  [aStageViewController setTasks:[[stages objectAtIndex:indexPath.row] findAllTasks]];
   [self.navigationController pushViewController:aStageViewController animated:YES];
   [aStageViewController release];
 }
