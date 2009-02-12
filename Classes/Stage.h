@@ -24,4 +24,5 @@
 @property (retain, nonatomic)NSString *projectId;
 
 -(NSArray *)findAllTasks;
+-(NSDictionary *)dumpKeys;
 @end

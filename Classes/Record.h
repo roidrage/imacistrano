@@ -15,7 +15,7 @@
   NSString *description;
 }
 
-@property (retain, nonatomic) NSString *recordId;
-@property (retain, nonatomic) NSString *name;
-@property (retain, nonatomic) NSString *description;
+@property (copy, nonatomic) NSString *recordId;
+@property (copy, nonatomic) NSString *name;
+@property (copy, nonatomic) NSString *description;
 @end

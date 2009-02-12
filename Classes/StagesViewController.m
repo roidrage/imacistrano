@@ -47,7 +47,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  CreateDeploymentController *aStageViewController = [[CreateDeploymentController alloc] initWithNibName:@"CreateDeploymentController" bundle:nil];
+  CreateDeploymentController *aStageViewController = [[CreateDeploymentController alloc]
+                                                      initWithNibName:@"CreateDeploymentController"
+                                                      bundle:nil];
   [aStageViewController setStage:[stages objectAtIndex:indexPath.row]];
   [aStageViewController setTasks:[[stages objectAtIndex:indexPath.row] findAllTasks]];
   [self.navigationController pushViewController:aStageViewController animated:YES];

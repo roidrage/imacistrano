@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ObjectiveResource.h"
+#import "Stage.h"
 
 @interface Deployment : NSObject {
   NSString *task;
@@ -17,12 +18,19 @@
   NSString *stageId;
   NSString *status;
   NSString *log;
+  Stage *stage;
 }
 
 @property (copy, nonatomic) NSString *task;
 @property (copy, nonatomic) NSString *description;
+@property (copy, nonatomic) NSString *projectId;
+@property (copy, nonatomic) NSString *stageId;
 @property (copy, nonatomic) NSString *deploymentId;
 @property (copy, nonatomic) NSString *status;
 @property (copy, nonatomic) NSString *log;
+@property (retain, nonatomic) Stage *stage;
 
+-(void)update;
+-(BOOL)wasSuccessful;
++(Deployment *)latest:(NSDictionary *)parameters;
 @end

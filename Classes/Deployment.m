@@ -11,7 +11,7 @@
 #import "Stage.h"
 
 @implementation Deployment
-@synthesize task, description, deploymentId, log, status;
+@synthesize task, description, deploymentId, log, status, stage, projectId, stageId, stage;
 
 + (NSString *)getRemoteCollectionPathWithParameters:(NSDictionary *)parameters {
   return [NSString stringWithFormat:@"%@%@/%@/%@/%@/%@.xml",
@@ -19,4 +19,44 @@
           [parameters objectForKey:@"projectId"], @"stages",
           [parameters objectForKey:@"stageId"], [self getRemoteCollectionName]];
 }
+
+- (void)update {
+  NSString *oldProjectId = [[self projectId] autorelease];
+  NSString *deploymentPath = [NSString stringWithFormat:@"%@%@/%@/%@/%@/%@/%@%@",
+                       [[self class] getRemoteSite],
+                       [Project getRemoteCollectionName],
+                       [self projectId],
+                       @"stages", [self stageId],
+                       [[self class] getRemoteCollectionName],
+                       [self deploymentId],
+                       [[self class] getRemoteProtocolExtension]];
+  
+  Response *res = [Connection get:deploymentPath withUser:[[self class] getRemoteUser] 
+                      andPassword:[[self class] getRemotePassword]];
+  
+  [self setProperties:[[[self class] fromXMLData:res.body] properties]];
+  [self setProjectId:oldProjectId];
+}
+
+- (BOOL)wasSuccessful {
+  return [[self status] isEqualToString:@"success"];
+}
+
++ (Deployment *)latest:(NSDictionary*)parameters {
+  NSString *latestDeploymentPath = [NSString stringWithFormat:@"%@projects/%@/stages/%@/%@/latest%@",
+                                    [self getRemoteSite], [parameters objectForKey:@"projectId"],
+                                    [parameters objectForKey:@"stageId"], [self getRemoteCollectionName], [self getRemoteProtocolExtension]];
+  
+  Response *res = [Connection get:latestDeploymentPath withUser:[self getRemoteUser]
+                      andPassword:[self getRemotePassword]];
+  if ([[res body] length] == 0) {
+    return nil;
+  }
+  Deployment * deployment = [[Deployment alloc] init];
+  [deployment setProperties:[[self fromXMLData:res.body] properties]];
+  [deployment setProjectId:[parameters objectForKey:@"projectId"]];
+  [deployment setStageId:[parameters objectForKey:@"stageId"]];
+  return deployment;
+}
+
 @end

@@ -22,4 +22,8 @@
 - (NSArray *)findAllTasks {
   return [Record findRemote:[NSString stringWithFormat:@"%@/%@/%@/%@", projectId, @"stages", stageId, @"tasks", nil]];
 }
+
+- (NSDictionary *)dumpKeys {
+  return [NSDictionary dictionaryWithObjectsAndKeys:[self projectId], @"projectId", [self stageId], @"stageId", nil];
+}
 @end

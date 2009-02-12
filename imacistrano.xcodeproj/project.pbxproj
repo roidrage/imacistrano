@@ -16,6 +16,8 @@
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		28C286E10D94DF7D0034E888 /* ProjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* ProjectsViewController.m */; };
 		FE3F5F8A0F42E5AF0044A4DF /* Deployment.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3F5F890F42E5AF0044A4DF /* Deployment.m */; };
+		FEA74C290F4445DB000231AB /* DeploymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA74C280F4445DB000231AB /* DeploymentViewController.m */; };
+		FEA74C2F0F44480B000231AB /* DeploymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEA74C2E0F44480B000231AB /* DeploymentViewController.xib */; };
 		FEE2D3300F41D87200389080 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FEE2D32F0F41D87200389080 /* Settings.bundle */; };
 		FEE7502A0E8FC7E1006BB5D4 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE750290E8FC7E1006BB5D4 /* Project.m */; };
 		FEE7502F0E8FC972006BB5D4 /* Host.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE7502E0E8FC972006BB5D4 /* Host.m */; };
@@ -71,6 +73,9 @@
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE3F5F880F42E5AF0044A4DF /* Deployment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deployment.h; sourceTree = "<group>"; };
 		FE3F5F890F42E5AF0044A4DF /* Deployment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deployment.m; sourceTree = "<group>"; };
+		FEA74C270F4445DB000231AB /* DeploymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeploymentViewController.h; sourceTree = "<group>"; };
+		FEA74C280F4445DB000231AB /* DeploymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeploymentViewController.m; sourceTree = "<group>"; };
+		FEA74C2E0F44480B000231AB /* DeploymentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeploymentViewController.xib; sourceTree = "<group>"; };
 		FEE2D32F0F41D87200389080 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		FEE750280E8FC7E1006BB5D4 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Project.h; path = ../Project.h; sourceTree = "<group>"; };
 		FEE750290E8FC7E1006BB5D4 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Project.m; path = ../Project.m; sourceTree = "<group>"; };
@@ -218,6 +223,7 @@
 				FEF420720F3B42D5009E6577 /* StagesViewController.xib */,
 				FEF420F60F3B5ACD009E6577 /* CreateDeploymentController.xib */,
 				FEE2D32F0F41D87200389080 /* Settings.bundle */,
+				FEA74C2E0F44480B000231AB /* DeploymentViewController.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -241,6 +247,8 @@
 				FEF41FE90F3B3AB8009E6577 /* StagesViewController.m */,
 				FEF420C80F3B537D009E6577 /* CreateDeploymentController.h */,
 				FEF420C90F3B537D009E6577 /* CreateDeploymentController.m */,
+				FEA74C270F4445DB000231AB /* DeploymentViewController.h */,
+				FEA74C280F4445DB000231AB /* DeploymentViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -452,6 +460,7 @@
 				FEF420730F3B42D5009E6577 /* StagesViewController.xib in Resources */,
 				FEF420F70F3B5ACD009E6577 /* CreateDeploymentController.xib in Resources */,
 				FEE2D3300F41D87200389080 /* Settings.bundle in Resources */,
+				FEA74C2F0F44480B000231AB /* DeploymentViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +509,7 @@
 				FEF420CA0F3B537D009E6577 /* CreateDeploymentController.m in Sources */,
 				FEF420E60F3B5572009E6577 /* Record.m in Sources */,
 				FE3F5F8A0F42E5AF0044A4DF /* Deployment.m in Sources */,
+				FEA74C290F4445DB000231AB /* DeploymentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

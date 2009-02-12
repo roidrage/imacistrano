@@ -14,6 +14,7 @@
   NSArray *tasks;
   IBOutlet UIPickerView *pickerView;
   IBOutlet UITextField *descriptionField;
+  IBOutlet UIActivityIndicatorView *spinner;
 }
 
 @property (retain, nonatomic) Stage *stage;
