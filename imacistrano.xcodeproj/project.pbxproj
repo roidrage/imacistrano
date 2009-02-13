@@ -16,6 +16,7 @@
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		28C286E10D94DF7D0034E888 /* ProjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* ProjectsViewController.m */; };
 		FE3F5F8A0F42E5AF0044A4DF /* Deployment.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3F5F890F42E5AF0044A4DF /* Deployment.m */; };
+		FE897A7A0F44BFEF00B7735B /* OperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = FE897A790F44BFEF00B7735B /* OperationQueue.m */; };
 		FEA74C290F4445DB000231AB /* DeploymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA74C280F4445DB000231AB /* DeploymentViewController.m */; };
 		FEA74C2F0F44480B000231AB /* DeploymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEA74C2E0F44480B000231AB /* DeploymentViewController.xib */; };
 		FEE2D3300F41D87200389080 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FEE2D32F0F41D87200389080 /* Settings.bundle */; };
@@ -73,6 +74,8 @@
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE3F5F880F42E5AF0044A4DF /* Deployment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deployment.h; sourceTree = "<group>"; };
 		FE3F5F890F42E5AF0044A4DF /* Deployment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deployment.m; sourceTree = "<group>"; };
+		FE897A780F44BFEF00B7735B /* OperationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperationQueue.h; sourceTree = "<group>"; };
+		FE897A790F44BFEF00B7735B /* OperationQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperationQueue.m; sourceTree = "<group>"; };
 		FEA74C270F4445DB000231AB /* DeploymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeploymentViewController.h; sourceTree = "<group>"; };
 		FEA74C280F4445DB000231AB /* DeploymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeploymentViewController.m; sourceTree = "<group>"; };
 		FEA74C2E0F44480B000231AB /* DeploymentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeploymentViewController.xib; sourceTree = "<group>"; };
@@ -266,6 +269,8 @@
 				FEF420E50F3B5572009E6577 /* Record.m */,
 				FE3F5F880F42E5AF0044A4DF /* Deployment.h */,
 				FE3F5F890F42E5AF0044A4DF /* Deployment.m */,
+				FE897A780F44BFEF00B7735B /* OperationQueue.h */,
+				FE897A790F44BFEF00B7735B /* OperationQueue.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -510,6 +515,7 @@
 				FEF420E60F3B5572009E6577 /* Record.m in Sources */,
 				FE3F5F8A0F42E5AF0044A4DF /* Deployment.m in Sources */,
 				FEA74C290F4445DB000231AB /* DeploymentViewController.m in Sources */,
+				FE897A7A0F44BFEF00B7735B /* OperationQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

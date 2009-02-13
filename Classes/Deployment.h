@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ObjectiveResource.h"
 #import "Stage.h"
+#import "imacistranoAppDelegate.h"
 
 @interface Deployment : NSObject {
   NSString *task;
@@ -32,5 +33,6 @@
 
 -(void)update;
 -(BOOL)wasSuccessful;
+-(void)runCreate;
 +(Deployment *)latest:(NSDictionary *)parameters;
 @end

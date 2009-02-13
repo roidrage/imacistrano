@@ -30,24 +30,23 @@
 
 - (void)runDeployment:(id)sender {
   [spinner startAnimating];
-  [NSThread sleepForTimeInterval:0.5];
-  Deployment *deployment = [[[Deployment alloc] init] autorelease];
+  Deployment *deployment = [[Deployment alloc] init];
   [deployment setDescription:[descriptionField text]];
   [deployment setTask:[[tasks objectAtIndex:[pickerView selectedRowInComponent:0]] name]];
-  [deployment setStage:[self stage]];
-  [deployment createRemoteWithParameters:[NSDictionary dictionaryWithObjectsAndKeys:
-                                          stage.projectId, @"projectId", stage.stageId,
-                                          @"stageId", nil]];
-  deployment = [Deployment latest:[stage dumpKeys]];
-  while (deployment == nil) {
-    deployment = [Deployment latest:[stage dumpKeys]];
-  }
-  [spinner stopAnimating];
-  [self switchToDeploymentView:deployment];
+  [deployment setStage:stage];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deploymentDidLoad:) name:@"deploymentDidLoad" object:nil];
+  [deployment runCreate];
 }
 
 - (void)dealloc {
   [super dealloc];
+}
+
+- (void)deploymentDidLoad:(id)notification {
+  Deployment *deployment = [notification object];
+  [spinner stopAnimating];
+  NSLog(@"Firing off deployment view from %@", [NSThread currentThread]);
+  [self switchToDeploymentView:deployment];
 }
 
 - (void)switchToDeploymentView:(Deployment*)deployment {

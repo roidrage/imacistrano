@@ -21,21 +21,32 @@
 }
 
 - (void)viewDidLoad {
-  [self setupTimer];
-  [spinner startAnimating];
   [super viewDidLoad];
+  [spinner startAnimating];
+  [self setupTimer];
 }
 
 - (void)setupTimer {
-  deploymentTimer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(updateDeployment:) userInfo:nil repeats:YES];
+  [NSThread detachNewThreadSelector:@selector(updateDeployment) toTarget:self withObject:nil];
 }
 
-- (void)updateDeployment:(NSTimer*)timer {
-  [deployment update];
-  [deploymentLog setText:[deployment log]];
-  if ([deployment wasSuccessful]) {
-    [deploymentTimer invalidate];
-    [spinner stopAnimating];
+- (void)updateDeployment {
+  NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+  while (YES) {
+    NSLog(@"running");
+    [deployment update];
+    NSLog(@"updated");
+    [deploymentLog performSelectorOnMainThread:@selector(setText:) withObject:[deployment log] waitUntilDone:NO];
+//    [deploymentLog setText:[deployment log]];
+    NSLog(@"set text");
+    if ([deployment wasSuccessful]) {
+ //     [spinner stopAnimating];
+      [spinner performSelectorOnMainThread:@selector(stopAnimating) withObject:nil waitUntilDone:YES];
+      return;
+    }
+    NSLog(@"next");
+    [NSThread sleepForTimeInterval:1.0];
   }
+  [pool release];
 }
 @end

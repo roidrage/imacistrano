@@ -9,6 +9,11 @@
 #import "Deployment.h"
 #import "Project.h"
 #import "Stage.h"
+#import "OperationQueue.h"
+
+@interface Deployment (PrivateInterface)
+-(void)createAndFindLatest;
+@end
 
 @implementation Deployment
 @synthesize task, description, deploymentId, log, status, stage, projectId, stageId, stage;
@@ -21,7 +26,8 @@
 }
 
 - (void)update {
-  NSString *oldProjectId = [[self projectId] autorelease];
+  NSLog(@"update: %@, %@", [self projectId], [self stageId]);
+  NSString *oldProjectId = [self projectId];
   NSString *deploymentPath = [NSString stringWithFormat:@"%@%@/%@/%@/%@/%@/%@%@",
                        [[self class] getRemoteSite],
                        [Project getRemoteCollectionName],
@@ -40,6 +46,27 @@
 
 - (BOOL)wasSuccessful {
   return [[self status] isEqualToString:@"success"];
+}
+
+- (void)runCreate {
+  NSInvocationOperation* theOp = [[NSInvocationOperation alloc]
+                                   initWithTarget:self
+                                   selector:@selector(createAndFindLatest:)
+                                   object:nil];
+  NSOperationQueue *queue = [OperationQueue sharedOperationQueue];
+  [queue addOperation:theOp];
+}
+
+- (void)createAndFindLatest:(id)data {
+  [self createRemoteWithParameters:[NSDictionary dictionaryWithObjectsAndKeys:
+                                          [[self stage] projectId], @"projectId", [[self stage] stageId],
+                                          @"stageId", nil]];
+  Deployment *deployment = [Deployment latest:[stage dumpKeys]];
+  while (deployment == nil) {
+    deployment = [Deployment latest:[stage dumpKeys]];
+  }
+  
+  [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"deploymentDidLoad" object:deployment]];
 }
 
 + (Deployment *)latest:(NSDictionary*)parameters {
