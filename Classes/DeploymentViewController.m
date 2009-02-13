@@ -22,6 +22,7 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deploymentDidUpdate:) name:@"deploymentDidUpdate" object:nil];
   [spinner startAnimating];
   [self setupTimer];
 }
@@ -30,21 +31,19 @@
   [NSThread detachNewThreadSelector:@selector(updateDeployment) toTarget:self withObject:nil];
 }
 
+- (void)deploymentDidUpdate:(NSNotification *)notification {
+  [deploymentLog performSelectorOnMainThread:@selector(setText:) withObject:[deployment log] waitUntilDone:YES];
+}
+
 - (void)updateDeployment {
   NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
   while (YES) {
-    NSLog(@"running");
     [deployment update];
-    NSLog(@"updated");
-    [deploymentLog performSelectorOnMainThread:@selector(setText:) withObject:[deployment log] waitUntilDone:NO];
-//    [deploymentLog setText:[deployment log]];
-    NSLog(@"set text");
+    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"deploymentDidUpdate" object:[deployment log]]];
     if ([deployment wasSuccessful]) {
- //     [spinner stopAnimating];
       [spinner performSelectorOnMainThread:@selector(stopAnimating) withObject:nil waitUntilDone:YES];
       return;
     }
-    NSLog(@"next");
     [NSThread sleepForTimeInterval:1.0];
   }
   [pool release];

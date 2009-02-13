@@ -44,12 +44,11 @@
 
 - (void)deploymentDidLoad:(id)notification {
   Deployment *deployment = [notification object];
-  [spinner stopAnimating];
-  NSLog(@"Firing off deployment view from %@", [NSThread currentThread]);
-  [self switchToDeploymentView:deployment];
+  [self performSelectorOnMainThread:@selector(switchToDeploymentView:) withObject:deployment waitUntilDone:NO];
 }
 
 - (void)switchToDeploymentView:(Deployment*)deployment {
+  [spinner stopAnimating];
   DeploymentViewController *deploymentViewController =
     [[DeploymentViewController alloc] initWithNibName:@"DeploymentViewController"
                                                bundle:nil];
